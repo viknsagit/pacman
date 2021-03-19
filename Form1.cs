@@ -65,6 +65,13 @@ namespace pacman
                 pacmanpic.Image = Properties.Resources.crl1;
             }
         }
+        private void eatb (object sender)
+        {
+            if (true)
+            {
+
+            }
+        }
             
 
             
