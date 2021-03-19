@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pacman
 {
     public partial class Form1 : Form
     {
+        int score = 0;
+
         public Form1()
         {
             InitializeComponent();
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -64,17 +58,30 @@ namespace pacman
                 pacmanpic.Left -= -10;
                 pacmanpic.Image = Properties.Resources.crl1;
             }
+
+
+            int eb1l = eb1.Left;
+
+            lscore.Text = Convert.ToString(score);
         }
-        private void eatb (object sender)
+
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            if (true)
+            int x1 = pacmanpic.Left;
+            int y1 = pacmanpic.Top;
+            int w1 = pacmanpic.Width;
+            int h1 = pacmanpic.Height;
+            int x2 = eb1.Left;
+            int y2 = eb1.Top;
+            int w2 = eb1.Width;
+            int h2 = eb1.Height;
+            if ((x1 + w1 > x2) & (x1 < x2 + w2) & (y1 + h1 == y2) & (y1 < y2 + h2)) ;
             {
+                score++;
+                eb1.Visible = false;
 
             }
         }
-            
-
-            
-        
     }
 }
