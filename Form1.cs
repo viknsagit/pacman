@@ -22,18 +22,22 @@ namespace pacman
             if (e.KeyCode == Keys.W)
             {
                 pacmanpic.Top -= 10;
+                pacmanpic.Image = Properties.Resources.top1;
             }
             if (e.KeyCode == Keys.A)
             {
                 pacmanpic.Left -= 10;
+                pacmanpic.Image = Properties.Resources.leftp;
             }
             if (e.KeyCode == Keys.S)
             {
                 pacmanpic.Top -= -10;
+                pacmanpic.Image = Properties.Resources.top2;
             }
             if (e.KeyCode == Keys.D)
             {
                 pacmanpic.Left -= -10;
+                pacmanpic.Image = Properties.Resources.rightp;
             }
         }
     }
