@@ -16,6 +16,7 @@ namespace pacman
         {
             InitializeComponent();
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -23,6 +24,7 @@ namespace pacman
             {
                 pacmanpic.Top -= 10;
                 pacmanpic.Image = Properties.Resources.top1;
+
             }
             if (e.KeyCode == Keys.A)
             {
@@ -40,5 +42,32 @@ namespace pacman
                 pacmanpic.Image = Properties.Resources.rightp;
             }
         }
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.W)
+            {
+                pacmanpic.Image = Properties.Resources.сt1;
+
+            }
+            if (e.KeyCode == Keys.A)
+            {
+                pacmanpic.Left -= 10;
+                pacmanpic.Image = Properties.Resources.crl2;
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                pacmanpic.Top -= -10;
+                pacmanpic.Image = Properties.Resources.сt2;
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                pacmanpic.Left -= -10;
+                pacmanpic.Image = Properties.Resources.crl1;
+            }
+        }
+            
+
+            
+        
     }
 }
